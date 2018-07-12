@@ -13,7 +13,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o ovh-update-record
 
 
 FROM alpine:latest  
-RUN apk add --no-cache --update ca-certificates curl bash grep
+RUN apk add --no-cache --update ca-certificates tzdata curl bash grep
 
 VOLUME /conf
 
